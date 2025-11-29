@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* HEADER */
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 28px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+  background-color: #34495e;
+  text-decoration: underline;
+}
+
+/* SECTIONS */
+.section {
+  padding: 100px 20px 40px;
+  text-align: center;
+  display: none;
+  min-height: 100vh;
+}
+
+.section.active {
+  display: block;
+}
+
+section h2 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+/* HOME */
+#home {
+  background-color: #3498db;
+  color: white;
+}
+
+.home-content h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.bulletin-section {
+  background: rgba(255,255,255,0.1);
+  margin-top: 50px;
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bulletin-section h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.bulletin-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.bulletin-item {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  color: #2c3e50;
+  text-align: left;
+}
+
+.bulletin-item h4 {
+  color: #3498db;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.bulletin-item p {
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+.bulletin-item strong {
+  color: #e74c3c;
+}
+
+/* COURSES */
+.course-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.course {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: #2c3e50;
+}
+
+.course h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 250px;
+  height: 180px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
