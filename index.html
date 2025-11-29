@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>U.A College</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>U.A College</h1>
+    <nav>
+      <a href="#home" onclick="showSection('home')" class="active">Home</a>
+      <a href="#courses" onclick="showSection('courses')">Courses</a>
+      <a href="#gallery" onclick="showSection('gallery')">Gallery</a>
+    </nav>
+  </header>
+
+  <!-- HOME (with Bulletin Board) -->
+  <section id="home" class="section active">
+    <div class="home-content">
+      <h2>Welcome to U.A College</h2>
+      <p>Best college for computer science courses</p>
+    </div>
+    
+    <!-- BULLETIN BOARD on Home -->
+    <div class="bulletin-section">
+      <h3>📢 Latest Notices</h3>
+      <div class="bulletin-container">
+        <div class="bulletin-item">
+          <h4>Exam Schedule</h4>
+          <p><b>Date:</b> Dec 5-10, 2025<br>BCA Semester 3 exams start next week.</p>
+        </div>
+        
+        <div class="bulletin-item">
+          <h4>Annual Fest</h4>
+          <p><b>Date:</b> Dec 15, 2025<br>TechFest 2025 - Register by Dec 10th!</p>
+        </div>
+        
+        <div class="bulletin-item">
+          <h4>Internship Drive</h4>
+          <p><b>Company:</b> TCS<br>Apply by Dec 8th. Visit placement cell.</p>
+        </div>
+        
+        <div class="bulletin-item">
+          <h4>Library Notice</h4>
+          <p>Library closed Dec 3rd. Return books by Dec 2nd.</p>
+        </div>
+        
+        <div class="bulletin-item">
+          <h4>Coding Competition</h4>
+          <p><b>Event:</b> CodeRush 2025<br>Prize money ₹50,000 on Dec 12th.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section id="courses" class="section">
+    <h2>Our Courses</h2>
+    <div class="course-list">
+      <div class="course">
+        <h3>BCA</h3>
+        <p>3 Years - Programming & Web Development</p>
+      </div>
+      <div class="course">
+        <h3>MCA</h3>
+        <p>2 Years - Software Development & AI</p>
+      </div>
+      <div class="course">
+        <h3>Web Development</h3>
+        <p>1 Year - HTML, CSS, JavaScript</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=300&h=200&fit=crop" alt="Campus Building">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=300&h=200&fit=crop" alt="Computer Lab">
+      <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=300&h=200&fit=crop" alt="Library">
+      <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=300&h=200&fit=crop" alt="Classroom">
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ABC College</p>
+  </footer>
+
+  <script>
+    function showSection(sectionId) {
+      var sections = document.querySelectorAll('.section');
+      sections.forEach(function(section) {
+        section.classList.remove('active');
+      });
+      
+      var links = document.querySelectorAll('nav a');
+      links.forEach(function(link) {
+        link.classList.remove('active');
+      });
+      
+      document.getElementById(sectionId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
